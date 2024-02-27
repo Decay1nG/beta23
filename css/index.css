@@ -658,7 +658,12 @@ ul, li {
 
 .class__list {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    height: 83%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 21px 25px 0px;
 }
 
 .class__list--item {
@@ -668,6 +673,7 @@ ul, li {
 .number__class--list {
     padding: 20px 0 0 30px;
     display: none;
+    font-size: 17px;
 }
 
 .class__list--item:hover > .number__class--list {
@@ -679,9 +685,14 @@ ul, li {
 }
 
 .number__class--item {
-    padding-bottom: 15px;
+    padding-bottom: 13px;
     cursor: pointer;
 }
+
+/*.number__class--list:nth-child(7), .number__class--list:nth-child(8), .number__class--list:nth-child(9) {*/
+/*    padding-bottom: 12px;*/
+/*    cursor: pointer;*/
+/*}*/
 
 .burger__menu {
     display: none;
@@ -691,16 +702,6 @@ ul, li {
     right: 30px;
     position: absolute;
 }
-
-
-/*@media (max-width: 760px) {*/
-/*    !*.study__change--row {*!*/
-/*    !*    display: none;*!*/
-/*    !*}*!*/
-/*    .burger__menu {*/
-/*        display: block;*/
-/*    }*/
-/*}*/
 
 #class__select2, #subject__select2 {
     border: none;
