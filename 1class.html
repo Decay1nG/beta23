@@ -322,7 +322,7 @@
 <?php include "../../shablons/button.php";?>
 		</header>
 		<div class="peidg">
-	
+
 <div class="content_menu">
 	<div class="mobile__menu">
         <div onclick="classAddOne('.mobile__menu', 'mobile__menu--active')" class="leave">
@@ -536,13 +536,19 @@
 
 			classButtons.forEach((item, i) => {
 				item.addEventListener('click', () => {
+                    if (classMenues[i].classList.contains('class__grid'))  {
+                            classMenues.forEach(item => {item.classList.remove('class__grid')});
+                    } else {
+                        classMenues.forEach(item => {item.classList.remove('class__grid')}); 
+                        classMenues[i].classList.toggle('class__grid');
+                    }
 
-                        
-						classMenues.forEach(item => {item.classList.remove('class__grid')})
-						classMenues.forEach(item => {item.classList.remove('number__list--item-active')});
-						classMenues[i].classList.toggle('class__grid')
+
+
+
+
 						// classMenues[i].classList.toggle('number__list--item-active');
-					
+
 
 
 					console.log(i)
@@ -750,7 +756,7 @@ itemtype="http://schema.org/ListItem">
 								</a>
 							</div>
 						</li>
-					
+
 						<li>
 							<div class="book">
 								<a href="/domashka/1-klass/matem/demidova_kozlova/">
@@ -1429,7 +1435,7 @@ itemtype="http://schema.org/ListItem">
                        </div>
                        </a>
                    </div>
-               </li>   
+               </li>
         </ul>
         					<div class="recklam_verh_niz">
 <?php include "../../shablons/reklamniz.php";?>
@@ -1448,9 +1454,9 @@ itemtype="http://schema.org/ListItem">
 <?php include "../../shablons/footers.php";?>
 
 
-</div>					
+</div>
 </div>
 					</div>
-					
+
 			</body>
 			</html>
