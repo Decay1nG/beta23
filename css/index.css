@@ -658,12 +658,12 @@ ul, li {
 
 .class__list {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     height: 83%;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-    padding: 21px 25px 0px;
+    padding: 10px 25px 0px;
 }
 
 .class__list--item {
@@ -671,9 +671,9 @@ ul, li {
 }
 
 .number__class--list {
-    padding: 20px 0 0 30px;
+    padding: 15px 0 0 31px;
     display: none;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 /*.class__list--item:hover > .number__class--list {*/
