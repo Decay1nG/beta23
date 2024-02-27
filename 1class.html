@@ -454,7 +454,7 @@
             </li>
             <li class="class__list--item">
                 7 класс
-                <ul class="number__class--list">
+                <ul class="number__class--list" id="class__list--7">
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/7-klass/english/">Английский язык</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/7-klass/algebra/">Алгебра</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/7-klass/geometriya/">Геометрия</a></li>
@@ -471,13 +471,10 @@
             </li>
             <li class="class__list--item">
                 8 класс
-                <ul class="number__class--list ">
+                <ul class="number__class--list class__list--8">
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/8-klass/english/">Английский язык</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/8-klass/algebra/">Алгебра</a></li>
-                    <li
-							class="number__class--item"><a
-							href="https://gdzshnik.ru/domashka/8-klass/geometriya/">Геометрия
-					</a></li>
+                    <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/8-klass/geometriya/">Геометрия</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/8-klass/fizika/">Физика</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/8-klass/himiya/">Химия</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/8-klass/russkij-yazyk/">Русский язык</a></li>
@@ -491,7 +488,7 @@
             </li>
             <li class="class__list--item">
                 9 класс
-                <ul class="number__class--list">
+                <ul class="number__class--list class__list--9">
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/9-klass/english/">Английский язык</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/9-klass/algebra/">Алгебра</a></li>
                     <li class="number__class--item"><a href="https://gdzshnik.ru/domashka/9-klass/geometriya/">Геометрия</a></li>
@@ -533,6 +530,29 @@
                 </ul>
             </li>
         </ul>
+		<script>
+			const classButtons = document.querySelectorAll('.class__list--item'),
+				  classMenues = document.querySelectorAll('.number__class--list');
+
+			classButtons.forEach((item, i) => {
+				item.addEventListener('click', () => {
+					if (i === 5 || i === 6 || i === 7 || i === 8) {
+						classMenues.forEach(item => {item.classList.remove('class__grid')})
+						classMenues.forEach(item => {item.classList.remove('number__list--item-active')});
+						classMenues[i].classList.toggle('class__grid')
+						// classMenues[i].classList.toggle('number__list--item-active');
+					} else {
+						classMenues.forEach(item => {item.classList.remove('number__list--item-active')});
+						classMenues.forEach(item => {item.classList.remove('class__grid')})
+						classMenues[i].classList.toggle('number__list--item-active');
+					}
+
+
+
+					console.log(i)
+				})
+			});
+		</script>
     </div>
 
 <?php include "../../shablons/menu.php";?>

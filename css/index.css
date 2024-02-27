@@ -676,9 +676,9 @@ ul, li {
     font-size: 17px;
 }
 
-.class__list--item:hover > .number__class--list {
-    display: block;
-}
+/*.class__list--item:hover > .number__class--list {*/
+/*    display: grid;*/
+/*}*/
 
 .number__list--item-active {
     display: block;
@@ -693,6 +693,19 @@ ul, li {
 /*    padding-bottom: 12px;*/
 /*    cursor: pointer;*/
 /*}*/
+
+.class__list--7, .class__list--8, .class__list--9 {
+
+
+
+}
+
+.class__grid{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    justify-items: stretch;
+    gap: 2px 42px;
+}
 
 .burger__menu {
     display: none;
