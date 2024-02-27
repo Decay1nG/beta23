@@ -29,7 +29,7 @@ header{
 header .header{
 	position: relative;
 	height: 114px;
-	width: 1100px;
+	max-width: 1100px;
 	margin:0 auto;
 }
 header .header .imgg{
