@@ -582,9 +582,17 @@ a, select {
     background-color: #ffffff75;
     width: 300px;
     height: 40px;
-    border: 1.5px solid black;
+
     font-size: 16px;
 }
+
+#class__select {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.select {border: 1px solid black; opacity: 0.2; pointer-events: none;}
+
 
 #study__button {
     display: flex;
@@ -694,12 +702,6 @@ ul, li {
 /*    cursor: pointer;*/
 /*}*/
 
-.class__list--7, .class__list--8, .class__list--9 {
-
-
-
-}
-
 .class__grid{
     display: grid;
     grid-template: 1fr / 1fr 1fr;
@@ -721,6 +723,17 @@ ul, li {
     width: 160px;
     font-size: 18px;
 }
+
+.select--active {
+    border: 1px solid #009688;
+    box-shadow: 1px 1px 8px 0px #2d998fd1;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*.study__change--subject{*/
+/*    opacity: 0.2;*/
+/*}*/
 
 #subject__select2 {
     width: fit-content;

@@ -73,7 +73,7 @@
             <form class="study__change" action="">
                 <div class="study__change--class">
                     <label for="class__select">Выберите класс</label>
-                    <select name="study__class" id="class__select">
+                    <select name="study__class" id="class__select" class="select select--active">
                         <option value="1-11">1-11</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -88,9 +88,9 @@
                         <option value="11">11</option>
                     </select>
                 </div>
-                <div class="study__cnahge--subject">
+                <div class="study__change--subject">
                     <label for="class__select">Выберите предмет</label>
-                    <select name="study__subject" id="subject__select">
+                    <select name="study__subject" id="subject__select" class="select">
                         <option value="1-11">предмет</option>
                         <option value="1">Математика</option>
                         <option value="2">Окружающий мир</option>
@@ -118,6 +118,12 @@
                     subjectSelect = document.querySelector('#subject__select'),
                     classSelect = document.querySelector('#class__select');
 
+                function activeAdd() {
+                    classSelect.classList.remove('select--active');
+                    classSelect.style.cssText = 'opacity: 1; pointer-events: auto;'
+                    subjectSelect.classList.add('select--active');
+                }
+
                 classSelect.addEventListener('change', () => {
                     switch (classSelect.value) {
                         case '1':
@@ -129,6 +135,7 @@
                                 <option value="okruzhayushchij-mir">Окружающий мир</option>
                                 <option value="literatura">Литература</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `1class.html`);
                             break
 
@@ -143,6 +150,7 @@
                                 <option value="informatika">Информатика</option>
                                 <option value="literatura">Литература</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '3':
@@ -156,6 +164,7 @@
                                 <option value="informatika">Информатика</option>
                                 <option value="literatura">Литература</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '4':
@@ -169,6 +178,7 @@
                                 <option value="informatika">Информатика</option>
                                 <option value="literatura">Литература</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '5':
@@ -186,6 +196,7 @@
                                 <option value="informatika">Информатика</option>
                                 <option value="literatura">Литература</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '6':
@@ -204,6 +215,7 @@
                                 <option value="informatika">Информатика</option>
                                 <option value="literatura">Литература</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '7':
@@ -222,6 +234,7 @@
                                 <option value="obg">ОБЖ</option>
                                 <option value="informatika">Информатика</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '8':
@@ -243,6 +256,7 @@
                             `;
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
+                            activeAdd();
                         case '9':
                             subjectSelect.innerHTML = `
                                 <option value="6">предмет</option>
@@ -260,6 +274,7 @@
                                 <option value="informatika">Информатика</option>
                                 <option value="literatura">Литература</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '10':
@@ -275,6 +290,7 @@
                                 <option value="geog">География</option>
                                 <option value="obshchestvoznanie">Обществознание</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                         case '11':
@@ -288,6 +304,7 @@
                                 <option value="biologiya">Биология</option>
                                 <option value="geografiya">География</option>
                             `;
+                            activeAdd();
                             studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/`);
                             break
                     }
@@ -295,6 +312,8 @@
                 });
 
                 subjectSelect.addEventListener('change', () => {
+                    subjectSelect.classList.remove('select--active')
+                    subjectSelect.style.cssText = 'pointer-events: auto; opacity: 1'
                     studyButton.setAttribute('href', `https://gdzshnik.ru/domashka/${classSelect.value}-klass/${subjectSelect.value}/`);
                 });
 

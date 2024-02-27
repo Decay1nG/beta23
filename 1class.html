@@ -536,18 +536,13 @@
 
 			classButtons.forEach((item, i) => {
 				item.addEventListener('click', () => {
-					if (i === 5 || i === 6 || i === 7 || i === 8) {
+
                         
 						classMenues.forEach(item => {item.classList.remove('class__grid')})
 						classMenues.forEach(item => {item.classList.remove('number__list--item-active')});
 						classMenues[i].classList.toggle('class__grid')
 						// classMenues[i].classList.toggle('number__list--item-active');
-					} else {
-						classMenues.forEach(item => {item.classList.remove('number__list--item-active')});
-						classMenues.forEach(item => {item.classList.remove('class__grid')})
-						classMenues[i].classList.toggle('number__list--item-active');
-					}
-
+					
 
 
 					console.log(i)
